@@ -11,11 +11,9 @@ services:
   DigitalMarketingFramework\Typo3\Distributor\Mail\Registry\EventListener\DistributorRegistryUpdateEventListener:
     tags:
       - name: event.listener
-        identifier: 'digital-marketing-framework/distributor-mail/registry-update/distributor'
         event: DigitalMarketingFramework\Typo3\Distributor\Core\Registry\Event\DistributorRegistryUpdateEvent
 
   DigitalMarketingFramework\Typo3\Distributor\Mail\Registry\EventListener\CoreRegistryUpdateEventListener:
     tags:
       - name: event.listener
-        identifier: 'digital-marketing-framework/distributor-mail/registry-update/core'
-        event: DigitalMarketingFramework\Typo3\Core\Core\Registry\Event\CoreRegistryUpdateEvent
+        event: DigitalMarketingFramework\Typo3\Core\Registry\Event\CoreRegistryUpdateEvent
