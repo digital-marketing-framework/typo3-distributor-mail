@@ -24,8 +24,10 @@ class MailManager implements MailManagerInterface
     {
         if ($message instanceof MailMessage) {
             $message->send();
+
             return;
         }
+
         $this->getMailer()->send($message);
     }
 }
