@@ -1,0 +1,113 @@
+distributor:
+    routes:
+        a88d02d9-24da-4c72-945a-ff35c9b3eebf:
+            uuid: a88d02d9-24da-4c72-945a-ff35c9b3eebf
+            weight: 10000
+            value:
+                type: mail
+                pass: ''
+                config:
+                    mail:
+                        enabled: true
+                        async: inherit
+                        disableStorage: inherit
+                        enableDataProviders:
+                            type: all
+                            config:
+                                all: {  }
+                        gate:
+                            type: 'true'
+                            config:
+                                'true': {  }
+                        data:
+                            passthroughFields:
+                                enabled: true
+                            fieldMap:
+                                fields: {  }
+                            ignoreEmptyFields:
+                                enabled: true
+                            excludeFields:
+                                fields: {  }
+                            prefix:
+                                prefix: ''
+                                action: add
+                        subject:
+                            data:
+                                type: constant
+                                config:
+                                    constant:
+                                        value: 'New Form Submission'
+                            modifiers: {  }
+                        sender:
+                            data:
+                                type: email
+                                config:
+                                    email:
+                                        address:
+                                            data:
+                                                type: constant
+                                                config:
+                                                    constant:
+                                                        value: ''
+                                            modifiers: {  }
+                                        name:
+                                            data:
+                                                type: constant
+                                                config:
+                                                    constant:
+                                                        value: ''
+                                            modifiers: {  }
+                            modifiers: {  }
+                        recipients:
+                            data:
+                                type: email
+                                config:
+                                    email:
+                                        address:
+                                            data:
+                                                type: constant
+                                                config:
+                                                    constant:
+                                                        value: ''
+                                            modifiers: {  }
+                                        name:
+                                            data:
+                                                type: constant
+                                                config:
+                                                    constant:
+                                                        value: ''
+                                            modifiers: {  }
+                            modifiers: {  }
+                        replyTo:
+                            data:
+                                type: email
+                                config:
+                                    email:
+                                        address:
+                                            data:
+                                                type: constant
+                                                config:
+                                                    constant:
+                                                        value: ''
+                                            modifiers: {  }
+                                        name:
+                                            data:
+                                                type: constant
+                                                config:
+                                                    constant:
+                                                        value: ''
+                                            modifiers: {  }
+                            modifiers: {  }
+                        includeAttachmentsInMail: false
+                        plainTextTemplate:
+                            template: '{all_values}'
+                        useHtml: false
+                        htmlTemplate:
+                            template: '{all_values}'
+metaData:
+    name: 'Mail Route'
+    version:
+        core: 1.0.0
+        distributor-core: 1.0.0
+        distributor-mail: 1.0.0
+    includes: {  }

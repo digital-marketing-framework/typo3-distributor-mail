@@ -17,3 +17,11 @@ services:
     tags:
       - name: event.listener
         event: DigitalMarketingFramework\Typo3\Core\Registry\Event\CoreRegistryUpdateEvent
+
+  # static configuration document update
+  DigitalMarketingFramework\Typo3\Distributor\Mail\ConfigurationDocument\Storage\EventListener\StaticConfigurationDocumentEventListener:
+    tags:
+      - name: event.listener
+        event: DigitalMarketingFramework\Typo3\Core\ConfigurationDocument\Storage\Event\StaticConfigurationDocumentIdentifierCollectionEvent
+      - name: event.listener
+        event: DigitalMarketingFramework\Typo3\Core\ConfigurationDocument\Storage\Event\StaticConfigurationDocumentLoadEvent
