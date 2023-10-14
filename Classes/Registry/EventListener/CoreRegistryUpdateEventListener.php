@@ -4,11 +4,12 @@ namespace DigitalMarketingFramework\Typo3\Distributor\Mail\Registry\EventListene
 
 use DigitalMarketingFramework\Distributor\Mail\DistributorMailInitialization;
 use DigitalMarketingFramework\Typo3\Core\Registry\EventListener\AbstractCoreRegistryUpdateEventListener;
+use DigitalMarketingFramework\Typo3\Distributor\Mail\Manager\MailManager;
 
 class CoreRegistryUpdateEventListener extends AbstractCoreRegistryUpdateEventListener
 {
-    public function __construct()
+    public function __construct(MailManager $mailManager)
     {
-        parent::__construct(new DistributorMailInitialization());
+        parent::__construct(new DistributorMailInitialization($mailManager, 'dmf_distributor_mail'));
     }
 }

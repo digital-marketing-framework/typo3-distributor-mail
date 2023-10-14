@@ -10,12 +10,12 @@ use TYPO3\CMS\Core\Utility\GeneralUtility;
 
 class MailManager implements MailManagerInterface
 {
-    protected function getMailer(): Mailer
-    {
-        return GeneralUtility::makeInstance(Mailer::class);
+    public function __construct(
+        protected Mailer $mailer
+    ) {
     }
 
-    public function createMessage(): Email
+    public function createMessage(): MailMessage
     {
         return GeneralUtility::makeInstance(MailMessage::class);
     }
@@ -24,10 +24,8 @@ class MailManager implements MailManagerInterface
     {
         if ($message instanceof MailMessage) {
             $message->send();
-
-            return;
+        } else {
+            $this->mailer->send($message);
         }
-
-        $this->getMailer()->send($message);
     }
 }
