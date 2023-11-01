@@ -1,113 +1,113 @@
 distributor:
-    routes:
-        a88d02d9-24da-4c72-945a-ff35c9b3eebf:
-            uuid: a88d02d9-24da-4c72-945a-ff35c9b3eebf
-            weight: 10000
-            value:
-                type: mail
-                pass: ''
+  routes:
+    a88d02d9-24da-4c72-945a-ff35c9b3eebf:
+      uuid: a88d02d9-24da-4c72-945a-ff35c9b3eebf
+      weight: 10000
+      value:
+        type: mail
+        pass: ''
+        config:
+          mail:
+            enabled: true
+            async: inherit
+            disableStorage: inherit
+            enableDataProviders:
+              type: all
+              config:
+                all: {}
+            gate:
+              type: 'true'
+              config:
+                'true': {}
+            data:
+              passthroughFields:
+                enabled: true
+              fieldMap:
+                fields: {}
+              ignoreEmptyFields:
+                enabled: true
+              excludeFields:
+                fields: {}
+              prefix:
+                prefix: ''
+                action: add
+            subject:
+              data:
+                type: constant
                 config:
-                    mail:
-                        enabled: true
-                        async: inherit
-                        disableStorage: inherit
-                        enableDataProviders:
-                            type: all
-                            config:
-                                all: {  }
-                        gate:
-                            type: 'true'
-                            config:
-                                'true': {  }
-                        data:
-                            passthroughFields:
-                                enabled: true
-                            fieldMap:
-                                fields: {  }
-                            ignoreEmptyFields:
-                                enabled: true
-                            excludeFields:
-                                fields: {  }
-                            prefix:
-                                prefix: ''
-                                action: add
-                        subject:
-                            data:
-                                type: constant
-                                config:
-                                    constant:
-                                        value: 'New Form Submission'
-                            modifiers: {  }
-                        sender:
-                            data:
-                                type: email
-                                config:
-                                    email:
-                                        address:
-                                            data:
-                                                type: constant
-                                                config:
-                                                    constant:
-                                                        value: ''
-                                            modifiers: {  }
-                                        name:
-                                            data:
-                                                type: constant
-                                                config:
-                                                    constant:
-                                                        value: ''
-                                            modifiers: {  }
-                            modifiers: {  }
-                        recipients:
-                            data:
-                                type: email
-                                config:
-                                    email:
-                                        address:
-                                            data:
-                                                type: constant
-                                                config:
-                                                    constant:
-                                                        value: ''
-                                            modifiers: {  }
-                                        name:
-                                            data:
-                                                type: constant
-                                                config:
-                                                    constant:
-                                                        value: ''
-                                            modifiers: {  }
-                            modifiers: {  }
-                        replyTo:
-                            data:
-                                type: email
-                                config:
-                                    email:
-                                        address:
-                                            data:
-                                                type: constant
-                                                config:
-                                                    constant:
-                                                        value: ''
-                                            modifiers: {  }
-                                        name:
-                                            data:
-                                                type: constant
-                                                config:
-                                                    constant:
-                                                        value: ''
-                                            modifiers: {  }
-                            modifiers: {  }
-                        includeAttachmentsInMail: false
-                        plainTextTemplate:
-                            template: '{all_values}'
-                        useHtml: false
-                        htmlTemplate:
-                            template: '{all_values}'
+                  constant:
+                    value: 'New Form Submission'
+              modifiers: {}
+            sender:
+              data:
+                type: email
+                config:
+                  email:
+                    address:
+                      data:
+                        type: constant
+                        config:
+                          constant:
+                            value: ''
+                      modifiers: {}
+                    name:
+                      data:
+                        type: constant
+                        config:
+                          constant:
+                            value: ''
+                      modifiers: {}
+              modifiers: {}
+            recipients:
+              data:
+                type: email
+                config:
+                  email:
+                    address:
+                      data:
+                        type: constant
+                        config:
+                          constant:
+                            value: ''
+                      modifiers: {}
+                    name:
+                      data:
+                        type: constant
+                        config:
+                          constant:
+                            value: ''
+                      modifiers: {}
+              modifiers: {}
+            replyTo:
+              data:
+                type: email
+                config:
+                  email:
+                    address:
+                      data:
+                        type: constant
+                        config:
+                          constant:
+                            value: ''
+                      modifiers: {}
+                    name:
+                      data:
+                        type: constant
+                        config:
+                          constant:
+                            value: ''
+                      modifiers: {}
+              modifiers: {}
+            includeAttachmentsInMail: false
+            plainTextTemplate:
+              template: "{% for key,value in all_values %}\n{{ key }}: {{ value }}\n{% endfor %}"
+            useHtml: false
+            htmlTemplate:
+              template: "<table>\n<tr>\n<td>Key</td>\n<td>Value</td>\n</tr>\n{% for key,value in all_values %}\n<tr>\n<td>{{ key }}</td>\n<td>{{ value }}</td>\n</tr>\n{% endfor %}\n</table>"
 metaData:
-    name: 'Mail Route'
-    version:
-        core: 1.0.0
-        distributor-core: 1.0.0
-        distributor-mail: 1.0.0
-    includes: {  }
+  name: 'Mail Route'
+  version:
+    core: 1.0.0
+    distributor-core: 1.0.0
+    distributor-mail: 1.0.0
+  includes: {}
