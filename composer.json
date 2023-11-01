@@ -25,8 +25,8 @@
   "require": {
     "php": "^8.1",
     "digital-marketing-framework/distributor-mail": "^1.0",
-    "digital-marketing-framework/typo3-template-engine-twig": "^1.0",
     "digital-marketing-framework/typo3-distributor-core": "^1.0",
+    "digital-marketing-framework/typo3-template-engine-twig": "^1.0",
     "typo3/cms-core": "^11.5 || ^12.4"
   },
   "require-dev": {
