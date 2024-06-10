@@ -32,15 +32,17 @@
 
 <div>
     <h4>Plain text body</h4>
-    <div class="container">
-        <pre>{{ plainText|raw }}</pre>
+    <div class="note">
+        <pre class="note-body">{{ plainText|raw }}</pre>
     </div>
 </div>
 
 <div>
     <h4>HTML body</h4>
-    <div class="container">
-        {{ htmlText|raw }}
+    <div class="note">
+        <div class="note-body">
+            {{ htmlText|raw }}
+        </div>
     </div>
 </div>
 
