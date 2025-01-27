@@ -4,7 +4,7 @@ namespace DigitalMarketingFramework\Typo3\Distributor\Mail\Registry\EventListene
 
 use DigitalMarketingFramework\Distributor\Mail\DistributorMailInitialization;
 use DigitalMarketingFramework\Typo3\Core\Registry\EventListener\AbstractCoreRegistryUpdateEventListener;
-use DigitalMarketingFramework\Typo3\Distributor\Mail\Manager\MailManager;
+use DigitalMarketingFramework\Typo3\Mail\Manager\MailManager;
 
 class CoreRegistryUpdateEventListener extends AbstractCoreRegistryUpdateEventListener
 {
