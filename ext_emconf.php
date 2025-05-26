@@ -11,9 +11,9 @@ $EM_CONF[$_EXTKEY] = [
     'constraints' => [
         'depends' => [
             'typo3' => '12.4.0-13.4.99',
-            'dmf_distributor_core' => '2.2.2-2.99.99',
-            'dmf_mail' => '1.0.0-1.99.99',
-            'dmf_template_engine_twig' => '2.0.0-2.99.99',
+            'dmf_distributor_core' => '3.0.0-3.99.99',
+            'dmf_mail' => '2.0.0-2.99.99',
+            'dmf_template_engine_twig' => '3.0.0-3.99.99',
         ],
         'conflicts' => [
         ],
